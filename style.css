@@ -353,9 +353,10 @@ h1 {
   width: 100%;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   /* margin-top: 1rem; */
   align-items: center;
+  margin-top: 1rem;
 }
 .sunday_art {
   margin: 0rem 0rem;
@@ -527,7 +528,7 @@ article {
 .sunday_but {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin: 1rem;
 }
 .sund_button_cont {
@@ -548,14 +549,17 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 .lineupdate3 {
-  width: 68%;
-  margin: 0px 0rem 0 5rem;
+  /* width: 68%;
+  margin: 0px 0rem 0 5rem; */
+
+  width: 100%;
+  margin: 0px 0rem 0 0rem;
 }
 .sidetil_update {
-  width: initial;
+  width: 30rem;
 }
 
 .meeting_desc_cont {
@@ -580,7 +584,7 @@ article {
 }
 .meeting_desc {
   border: 2px sold blue;
-  margin: 0rem 3rem;
+  margin: 0rem 1rem;
   font-family: "Krub";
   font-size: 1.12rem;
 
@@ -610,8 +614,11 @@ article {
 
 .media_cont {
   background: var(--col_light_5);
-  margin: 0rem 21rem;
-  height: 38rem;
+  height: 30rem;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0%);
+  width: fit-content;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -619,6 +626,8 @@ article {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
+  padding: 0rem 2rem;
+  margin-bottom: 7rem;
 }
 
 .media_live {
@@ -626,4 +635,179 @@ article {
   /* transform: scale(0.8); */
   width: 100%;
   background: var(--col_light_5);
+}
+
+.team_cont {
+  margin: 0rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 6rem;
+}
+
+.team_card {
+  background-color: var(--col_light_6);
+  cursor: pointer;
+  min-width: 23rem;
+}
+.team_card:hover .cardbase {
+  transform: translate(0%, 0%);
+  transition: 0.3s ease;
+}
+/* .team_text:hover {
+  text-decoration: underline;
+} */
+.cardbase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: 0.2rem solid var(--col_light_6);
+  background-color: var(--col_light_2);
+  transform: translate(-2%, -4%);
+  padding: 2rem 1rem;
+  z-index: 1;
+}
+.team_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Krub";
+  font-size: 1em;
+  letter-spacing: 0.2rem;
+}
+.tt1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.tt2 {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+.team_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Krub";
+  gap: 0.6rem;
+}
+.team_contact_icon {
+  display: flex;
+  width: 100%;
+  /* width: 18rem; */
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  color: var(--col_light_4);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+.team_contact_icon:hover .ahover {
+  text-decoration: underline;
+}
+
+.closing_text {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10rem;
+}
+
+.punch_line {
+  padding: 5rem 10rem 0rem 10rem;
+  font-family: "Krub";
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--col_light_4);
+  text-align: center;
+  line-height: 1.8;
+  border-top: 0.1rem solid var(--col_light_8);
+  letter-spacing: 0.3rem;
+}
+
+footer {
+  width: 100%;
+  height: 40rem;
+  height: max-content;
+  background-color: var(--col_light_5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.foot_1 {
+  width: 100%;
+  margin: 0rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+.foot11 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Krub";
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+.line7 {
+  width: 1000%;
+  height: 0.1rem;
+  background-color: #ffffff;
+  opacity: 0.2;
+  position: relative;
+}
+.logo {
+  width: 8rem;
+  height: 8rem;
+  /* background-color: var(--col_light_0-8); */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foot_2 {
+  width: 100%;
+  background-color: #7e786f51;
+  height: 24rem;
+}
+
+.foot_3 {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Krub";
+  color: var(--col_light_0-5);
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
 }

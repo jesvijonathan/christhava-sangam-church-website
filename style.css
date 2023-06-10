@@ -345,7 +345,7 @@ h1 {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .sunday_tit {
   display: flex;
@@ -425,7 +425,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
 .photoframe_picker ul {
   gap: 1rem;
@@ -490,7 +490,7 @@ article {
   color: var(--col_light_6);
   background-color: var(--col_light_2);
   border: 0.05rem solid var(--col_light_3);
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
   text-align: center;
   display: flex;
   align-items: center;
@@ -515,4 +515,26 @@ article {
   z-index: 2;
   opacity: 0.2;
   margin: 0rem 2rem 0rem 4rem;
+}
+
+.bigger_but {
+  width: 15rem;
+  height: 8rem;
+}
+.sunday_but {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 1rem;
+}
+.sund_button_cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+.wbutin2 {
+  transform: translate(-3%, -7%);
 }

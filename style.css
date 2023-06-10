@@ -607,3 +607,23 @@ article {
   text-align: center;
   font-family: "Krub";
 }
+
+.media_cont {
+  background: var(--col_light_5);
+  margin: 0rem 21rem;
+  height: 38rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.media_live {
+  height: 100%;
+  /* transform: scale(0.8); */
+  width: 100%;
+  background: var(--col_light_5);
+}

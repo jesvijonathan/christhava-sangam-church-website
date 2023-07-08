@@ -76,6 +76,9 @@ a {
   color: inherit;
   cursor: pointer;
 }
+section {
+  overflow: hidden;
+}
 
 .first_section {
   min-height: 20vh;

@@ -327,7 +327,7 @@ h1 {
 
 .center_title {
   margin-top: 3rem;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
 }
 .side_title {

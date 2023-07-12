@@ -52,7 +52,9 @@ header,
   top: 0;
   scroll-behavior: smooth;
 }
-
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: var(--col_light_2);
   overflow-x: hidden;
@@ -733,7 +735,7 @@ article {
   align-content: flex-start;
   color: var(--col_light_4);
   font-size: 0.9vw;
-  letter-spacing: 0.2vh;
+  letter-spacing: 0.1vh;
   font-weight: 500;
 }
 

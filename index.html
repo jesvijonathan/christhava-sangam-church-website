@@ -40,50 +40,138 @@
 
   <header>
     <div class="navbar">
-      <div class="navbar_bg"></div>
+      <div class="navbar_bg jos" data-jos_anchor="#main_title"
+      data-jos_duration="0.5"
+      data-jos_animation="navbg_change"></div>
       <ul class="navlink">
-        <li class="navlink_active"><a href="index.html">Home</a></li>
-        <li><a href="description.html">About</a></li>
-        <li><a href="ministry.html">Ministry</a></li>
-        <li><a href="location.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="jos" 
+        data-jos_anchor="#home"
+        data-jos_animation="underline"
+        ><a href="#home" >Home</a></li>
+        <li class="jos" 
+        data-jos_anchor="#about" 
+        data-jos_animation="underline"><a href="#about">About</a></li>
+        <li class="jos" 
+        data-jos_anchor="#ministry"
+        data-jos_animation="underline"><a href="#ministry">Ministry</a></li>
+        <li class="jos" 
+        data-jos_anchor="#events"
+        data-jos_animation="underline"><a href="#events">Events</a></li>
+        <li class="jos" 
+        data-jos_anchor="#contact"
+        data-jos_animation="underline"><a href="#contact">Contact</a></li>
       </ul>
     </div>
+    <style>
+      .jos-underline{  
+         border-bottom: 0.1rem solid transparent !important;
+      }
+      .jos-navbg_change{
+        background-color:rgba(46, 38, 24, 1) !important;
+      }
+    </style>
+    <script>
+      function navbar_bg(){
+        navbg =document.querySelector(".navbar_bg")
+        navbg.style.background = "brown";
+      }
+    </script>
+ 
   </header>
 
   <body class="main" id="butter">
-    <section class="first_section">
-      <div class="background"></div>
+    <section id="home"   class=" first_section"
+    data-jos_anchor="#main_title"
+    data-jos_animation="blur"
+    data-jos_duration="0.5"  >
+      <div id="background_main" 
+      class="background"></div>
+      <script>
+        function kk(){
+          alert("kk");
+        }
+      </script>
       <div class="landing_container">
-        <div class="landing_title">Christhava Sangam Church</div>
+        <div id="main_title" class="landing_title">Christhava Sangam Church</div>
         <div class="landing_verse_container">
           <div class="line"></div>
-          <div class="landing_verse">
+          <div id="landing_verse"class="landing_verse">
             "Surely the LORD is in this place" - Genesis 28:16
           </div>
           <div class="line"></div>
         </div>
       </div>
-      <div class="bg_picker">
-        <ul>
-          <li style="opacity: 0"></li>
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-          <li></li>
+      <div  class="bg_picker">
+        <ul id="backgroun_main_dot">
+          <li onclick="background_changer(0)" style="opacity: 0"></li>
+          <li onclick="background_changer(0)" class="active"></li>
+          <li onclick="background_changer(1)"></li>
+          <li onclick="background_changer(2)"> </li>
+          <li onclick="background_changer(3)"></li>
         </ul>
       </div>
     </section>
-    <section>
+    <style>
+      .preloaded-image {
+        display: none;
+      }
+      .jos-blur{
+        filter: blur(20px);
+        transform: scale(1.1);
+        opacity: 0;
+        
+      }
+    </style>
+    
+    <div class="preloaded-image" style="background-image: url(./mount.png);"></div>
+    <div class="preloaded-image" style="background-image: url(./grass.jpg);"></div>
+    <div class="preloaded-image" style="background-image: url(./res.jpg);"></div>
+    <div class="preloaded-image" style="background-image: url(./beach.jpg);"></div>
+    <script>
+
+      img_url = ["./mount.png","./grass.jpg","./res.jpg","./beach.jpg"]
+      verse = [
+      "Surely the LORD is in this place",
+      "This is the day that the LORD has made; let us rejoice and be glad in it",
+      "The LORD is my shepherd; I shall not want",
+      "The LORD is my light and my salvation; whom shall I fear?", 
+      ]
+      let i =0;
+      interval_s = 6000;
+      bg = document.getElementById("background_main");
+      dot = document.getElementById("backgroun_main_dot");
+      ver = document.getElementById("landing_verse");
+      
+
+      function background_changer(i){
+        bg.style.backgroundImage= "url("+img_url[i]+")";
+        // remove every active class
+        for(let j=0;j<dot.children.length;j++){
+          dot.children[j].classList.remove("active");
+        }
+        dot.children[i+1].classList.add("active");
+        ver.innerHTML = verse[i];
+      }
+      const bg_interval = setInterval(() => {
+        if(i>=img_url.length-1)
+          i=0;
+        else
+          i++;
+        background_changer(i);
+      }, interval_s);
+
+
+    </script>
+    <section id="about"  
+   >
       <h1
         class="center_title jos"
         data-jos_rootMargin_top="-10%"
-        data-jos_rootMargin_bottom="30%"
+        data-jos_rootMargin_bottom="0%"
       >
         Our Church
       </h1>
-      <br />
-      <article         class="center_title jos"  >
+      <article         class="center_title jos artt"  >
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -94,16 +182,13 @@
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </article>
-      <br />
-      <article                  class="center_title jos" >
+      <article                  class="center_title artt jos" style="margin-top: 2vw;">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took and typesetting industry.
-      </article>
-      <br />
-      <h1 class="center_title jos">Mission & Vision</h1>
-      <br />
-      <article class="jos">
+      </article> 
+      <h1 class="center_title jos" style="margin-top: 5vw;">Mission & Vision</h1> 
+      <article class="jos artt" style="margin-top: 2rem">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -129,7 +214,7 @@
         <div class="line2 jos" data-jos_animation="slide-left"></div>
       </div>
     </section>
-    <section class="second_section">
+    <section id="ministry"class="second_section ">
       <div class="sunday_cont jos" data-jos_animation="fade-up">
         <div class="side_cont">
           <div class="sunday_tit jos" data-jos_animation="fade-right">
@@ -174,7 +259,7 @@
           </div>
           <div class="photoframe_picker">
             <ul>
-              <li class="active"></li>
+              <li class="ph_active"></li>
               <li></li>
               <li></li>
               <div class="photoframe_picker_triangle"></div>
@@ -283,16 +368,16 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="events">
       <!-- <button class="wbut">
         <div class="wbutin">Know More</div>
          -->
       <h1 class="center_title jos">Media</h1>
       <div class="media_cont jos" data-jos_animation="flip">
-        <img class="media_live jos" src="./Group 13.png" />
+        <img class="media_live jos" data-jos_animation="slide" src="./Group 13.png" />
       </div>
     </section>
-    <section>
+    <section id="contact">
       <h1 class="center_title jos">Meet The Team</h1>
       <div class="team_cont">
         <div class="team_card jos">
@@ -303,11 +388,11 @@
             </div>
             <div class="team_contact">
               <div class="team_contact_icon">
-                <img src="./icons8-phone-24.png" />
+                <img class="iconss" src="./Vector.png" />
                 <div class="ahover">+94 87868449</div>
               </div>
               <div class="team_contact_icon">
-                <img src="./icons8-email-24.png" />
+                <img class="iconss2" src="./Vector2.png" />
                 <div class="ahover">mosesjeyapaul@gmail.com</div>
               </div>
             </div>
@@ -323,11 +408,11 @@
             </div>
             <div class="team_contact">
               <div class="team_contact_icon">
-                <img src="./icons8-phone-24.png" />
+                <img class="iconss" src="./Vector.png" />
                 <div class="ahover">+94 87868449</div>
               </div>
               <div class="team_contact_icon">
-                <img src="./icons8-email-24.png" />
+                <img class="iconss2" src="./Vector2.png" />
                 <div class="ahover">ybenny@gmail.com</div>
               </div>
             </div>
@@ -342,11 +427,11 @@
             </div>
             <div class="team_contact">
               <div class="team_contact_icon">
-                <img src="./icons8-phone-24.png" />
+                <img class="iconss" src="./Vector.png" />
                 <div class="ahover">+94 87868449</div>
               </div>
               <div class="team_contact_icon">
-                <img src="./icons8-email-24.png" />
+                <img class="iconss2" src="./Vector2.png" />
                 <div class="ahover">shiphimoses@gmail.com</div>
               </div>
             </div>
@@ -354,7 +439,7 @@
         </div>
       </div>
       <div class="closing_text">
-        <div class="punch_line jos" data-jos_animation="stretch-vertical">Come & Be Blessed</div>
+        <div class="punch_line jos" data-jos_rootMargin_bottom="30%" data-jos_animation="stretch-vertical">Come & Be Blessed</div>
       </div>
     </section>
   </body>
@@ -372,7 +457,57 @@
         <img class="logo" src="./JyhlAadF_2x-removebg-preview.png" />
         <div class="line7"></div>
       </div>
-      <div class="foot_2 jos" data-jos_animation="stretch-vertical" data-jos_duration="0.5"></div>
+      <div class="foot_2 jos" data-jos_animation="stretch-vertical" data-jos_duration="0.5" >
+<div class="foot_2_1">
+  <div class="foot_2_1_1" style="margin-left: 0;">
+    <div class="foot_2_1_1_title">Socials</div>
+    <ul class="foot_2_1_1_list">
+      <li><a href="" target="_blank">Facebook</a></li>
+      <li><a href="" target="_blank">Phone</a></li>
+      <li><a href="" target="_blank">Telegram</a></li>
+      <li><a href="" target="_blank">Whatsapp</a></li>
+      <li><a href="" target="_blank">Email</a></li>
+    </ul>
+  </div>
+  <div class="line6"></div>
+  <div class="foot_2_1_1">
+    <div class="foot_2_1_1_title">Ministry</div>
+    <ul class="foot_2_1_1_list">
+      <li><a href="" target="_blank">Sunday Service</a></li>
+      <li><a href="" target="_blank">Sunday Class</a></li>
+      <li><a href="" target="_blank">Youtht Meeting</a></li>
+      <li><a href="" target="_blank">Fasting Prayer</a></li>
+      <li><a href="" target="_blank">Bible Study</a></li>
+    </ul>
+  </div>
+  <div class="line6"></div>
+  <div class="foot_2_1_1">
+    <div class="foot_2_1_1_title">Services</div>
+    <ul class="foot_2_1_1_list">
+      <li><a href="" target="_blank">Terms & Condition</a></li>
+      <li><a href="" target="_blank">Cookie Policy</a></li>
+      <li><a href="" target="_blank">Report</a></li>
+      <li><a href="" target="_blank">Contact Us</a></li>
+      <li><a href="" target="_blank">Website</a></li>
+    </ul>
+  </div>
+</div>
+<div class="foot_2_2">
+  <div class="foot_2_2_ma">
+    <div class="foot_2_2_te">Location on Map</div>
+    <div class="foot_map_arrow">></div>
+  </div>
+  <div class="foot_2_2_soc">
+    <ul>
+      <li><a href="" target="_blank">o</a></li>
+      <li><a href="" target="_blank">o</a></li>
+      <li><a href="" target="_blank">o</a></li>
+      <li><a href="" target="_blank">o</a></li>
+      <li><a href="" target="_blank">o</a></li>
+    </ul>
+  </div>
+</div>
+      </div>
       <div class="foot_3 jos" data-jos_rootMargin_bottom="0%" data-jos_animation="fade">
         <div class="jos" data-jos_animation="fade" data-jos_rootMargin_bottom="0%" data-jos_delay="0.1">© 2023</div>
         |
@@ -384,13 +519,13 @@
   </footer>
 </html>
 
-<script src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library/dev/jos.js"></script>
+<script src="https://unpkg.com/jos-animation"></script>
 <!-- Initialize JOS with default settings -->
 <script>
   JOS.init({
     duration: 0.5,
     animation: "fade-up",
-    rootMargin: "0% 0% -10% 0%",
+    rootMargin: "0% 0% 7% 0%",
     scrollDirection: "down",
   });
 </script>

@@ -6,14 +6,12 @@ JOS v0.8.4 By Jesvi Jonathan
 .jos {
   /* opacity: 1;
   display: block; */
-  transition: transform, opacity 0.5s;
-  transition-timing-function: ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .jos-anchor {
   opacity: 0;
-  transition: transform, opacity 0.5s;
-  transition-timing-function: ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .jos-static {
   transform: translate(0, 0);

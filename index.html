@@ -2,17 +2,47 @@
 <html>
   <head>
     <title>Christhava Sangam Church</title>
-    <link rel="stylesheet" href="style.css" />
     <link
+    id="jos-stylesheet"
+    rel="stylesheet"
+    href="https://unpkg.com/jos-animation@0.8.8/dist/jos.css"
+    crossorigin="anonymous"
+  />
+
+    <!-- <link
+      id="jos-stylesheet"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library/dist/v0.8.8/jos.css"
+      crossorigin="anonymous"
+    /> -->
+    
+    <!-- <link
       id="jos-stylesheet"
       rel="stylesheet"
       href="./jos.css"
       crossorigin="anonymous"
+    /> -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
   </head>
   <div class="splash" id="splash">
     <div class="logo_cont" id="logo_cont">
@@ -44,73 +74,90 @@
 
   <header>
     <div class="navbar">
-      <div class="navbar_bg jos" data-jos_anchor="#main_title"
-      data-jos_duration="0.5"
-      data-jos_animation="navbg_change"></div>
+      <div
+        class="navbar_bg jos"
+        data-jos_anchor="#main_title"
+        data-jos_duration="0.5"
+        data-jos_animation="navbg_change"
+      ></div>
       <ul class="navlink">
-        <li class="jos" 
-        data-jos_anchor="#home"
-        data-jos_animation="underline"
-        ><a href="#home" >Home</a></li>
-        <li class="jos" 
-        data-jos_anchor="#about" 
-        data-jos_animation="underline"><a href="#about">About</a></li>
-        <li class="jos" 
-        data-jos_anchor="#ministry"
-        data-jos_animation="underline"><a href="#ministry">Ministry</a></li>
-        <li class="jos" 
-        data-jos_anchor="#events"
-        data-jos_animation="underline"><a href="#events">Events</a></li>
-        <li class="jos" 
-        data-jos_anchor="#contact"
-        data-jos_animation="underline"><a href="#contact">Contact</a></li>
+        <li class="jos" data-jos_anchor="#home" data-jos_animation="underline">
+          <a href="#home">Home</a>
+        </li>
+        <li class="jos" data-jos_anchor="#about" data-jos_animation="underline">
+          <a href="#about">About</a>
+        </li>
+        <li
+          class="jos"
+          data-jos_anchor="#ministry"
+          data-jos_animation="underline"
+        >
+          <a href="#ministry">Ministry</a>
+        </li>
+        <li
+          class="jos"
+          data-jos_anchor="#events"
+          data-jos_animation="underline"
+        >
+          <a href="#events">Events</a>
+        </li>
+        <li
+          class="jos"
+          data-jos_anchor="#contact"
+          data-jos_animation="underline"
+        >
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
     <style>
-      .jos-underline{  
-         border-bottom: 0.1rem solid transparent !important;
+      .jos-underline {
+        border-bottom: 0.1rem solid transparent !important;
       }
-      .jos-navbg_change{
-        background-color:rgba(46, 38, 24, 1) !important;
+      .jos-navbg_change {
+        background-color: rgba(46, 38, 24, 1) !important;
       }
     </style>
     <script>
-      function navbar_bg(){
-        navbg =document.querySelector(".navbar_bg")
+      function navbar_bg() {
+        navbg = document.querySelector(".navbar_bg");
         navbg.style.background = "brown";
       }
     </script>
- 
   </header>
 
   <body class="main" id="butter">
-    <section id="home"   class=" first_section"
-    data-jos_anchor="#main_title"
-    data-jos_animation="blur"
-    data-jos_duration="0.5"  >
-      <div id="background_main" 
-      class="background"></div>
+    <section
+      id="home"
+      class="first_section"
+      data-jos_anchor="#main_title"
+      data-jos_animation="blur"
+      data-jos_duration="0.5"
+    >
+      <div id="background_main" class="background"></div>
       <script>
-        function kk(){
+        function kk() {
           alert("kk");
         }
       </script>
       <div class="landing_container">
-        <div id="main_title" class="landing_title">Christhava Sangam Church</div>
+        <div id="main_title" class="landing_title">
+          Christhava Sangam Church
+        </div>
         <div class="landing_verse_container">
           <div class="line"></div>
-          <div id="landing_verse"class="landing_verse">
+          <div id="landing_verse" class="landing_verse">
             "Surely the LORD is in this place" - Genesis 28:16
           </div>
           <div class="line"></div>
         </div>
       </div>
-      <div  class="bg_picker">
+      <div class="bg_picker">
         <ul id="backgroun_main_dot">
           <li onclick="background_changer(0)" style="opacity: 0"></li>
           <li onclick="background_changer(0)" class="active"></li>
           <li onclick="background_changer(1)"></li>
-          <li onclick="background_changer(2)"> </li>
+          <li onclick="background_changer(2)"></li>
           <li onclick="background_changer(3)"></li>
         </ul>
       </div>
@@ -119,55 +166,56 @@
       .preloaded-image {
         display: none;
       }
-      .jos-blur{
+      .jos-blur {
         filter: blur(20px);
         transform: scale(1.1);
         opacity: 0;
-        
       }
     </style>
-    
-    <div class="preloaded-image" style="background-image: url(./mount.png);"></div>
-    <div class="preloaded-image" style="background-image: url(./grass.jpg);"></div>
-    <div class="preloaded-image" style="background-image: url(./res.jpg);"></div>
-    <div class="preloaded-image" style="background-image: url(./beach.jpg);"></div>
-    <script>
 
-      img_url = ["./mount.png","./grass.jpg","./res.jpg","./beach.jpg"]
+    <div
+      class="preloaded-image"
+      style="background-image: url(./mount.png)"
+    ></div>
+    <div
+      class="preloaded-image"
+      style="background-image: url(./grass.jpg)"
+    ></div>
+    <div class="preloaded-image" style="background-image: url(./res.jpg)"></div>
+    <div
+      class="preloaded-image"
+      style="background-image: url(./beach.jpg)"
+    ></div>
+    <script>
+      img_url = ["./mount.png", "./grass.jpg", "./res.jpg", "./beach.jpg"];
       verse = [
-      "Surely the LORD is in this place",
-      "This is the day that the LORD has made; let us rejoice and be glad in it",
-      "The LORD is my shepherd; I shall not want",
-      "The LORD is my light and my salvation; whom shall I fear?", 
-      ]
-      let i =0;
+        "Surely the LORD is in this place",
+        "This is the day that the LORD has made; let us rejoice and be glad in it",
+        "The LORD is my shepherd; I shall not want",
+        "The LORD is my light and my salvation; whom shall I fear?",
+      ];
+      let i = 0;
       interval_s = 6000;
       bg = document.getElementById("background_main");
       dot = document.getElementById("backgroun_main_dot");
       ver = document.getElementById("landing_verse");
-      
 
-      function background_changer(i){
-        bg.style.backgroundImage= "url("+img_url[i]+")";
+      function background_changer(i) {
+        bg.style.backgroundImage = "url(" + img_url[i] + ")";
         // remove every active class
-        for(let j=0;j<dot.children.length;j++){
+        for (let j = 0; j < dot.children.length; j++) {
           dot.children[j].classList.remove("active");
         }
-        dot.children[i+1].classList.add("active");
+        dot.children[i + 1].classList.add("active");
         ver.innerHTML = verse[i];
       }
       const bg_interval = setInterval(() => {
-        if(i>=img_url.length-1)
-          i=0;
-        else
-          i++;
+        if (i >= img_url.length - 1) i = 0;
+        else i++;
         background_changer(i);
       }, interval_s);
-
-
     </script>
-    <section id="about"  
-   >
+    <section id="about">
       <h1
         class="center_title jos"
         data-jos_rootMargin_top="-10%"
@@ -175,7 +223,7 @@
       >
         Our Church
       </h1>
-      <article         class="center_title jos artt"  >
+      <article class="center_title jos artt">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -186,12 +234,12 @@
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </article>
-      <article                  class="center_title artt jos" style="margin-top: 2vw;">
+      <article class="center_title artt jos" style="margin-top: 2vw">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took and typesetting industry.
-      </article> 
-      <h1 class="center_title jos" style="margin-top: 5vw;">Mission & Vision</h1> 
+      </article>
+      <h1 class="center_title jos" style="margin-top: 5vw">Mission & Vision</h1>
       <article class="jos artt" style="margin-top: 2rem">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -208,36 +256,35 @@
         passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.
       </article>
-      <div class=" vm_container " data-jos_animation="fade-up" >
-        <button class="jos wbut " data-jos_animation="fade-right" >
+      <div class="vm_container" data-jos_animation="fade-up">
+        <button class="jos wbut" data-jos_animation="fade-right">
           <div class="wbutin">Know More</div>
         </button>
-        <button class="jos wbut " data-jos_animation="fade-right" >
+        <button class="jos wbut" data-jos_animation="fade-right">
           <div class="wbutin">Support</div>
         </button>
         <div class="line2 jos" data-jos_animation="slide-left"></div>
       </div>
     </section>
-    <section id="ministry"class="second_section ">
+    <section id="ministry" class="second_section">
       <div class="sunday_cont jos" data-jos_animation="fade-up">
         <div class="side_cont">
           <div class="sunday_tit jos" data-jos_animation="fade-right">
-            <div class="side_title ">
+            <div class="side_title">
               <h1>Sunday Service</h1>
             </div>
             <div class="line3 jos" data-jos_animation="slide-left"></div>
           </div>
           <br />
-          <article class="sunday_art ">
+          <article class="sunday_art">
             scrambled it to make a type specimen book. It has survived not only
             five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s
             with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus
           </article>
-          <div class="sund_button_cont " >
-            <button class="wbut bigger_but jos"
-            data-jos_animation="fade-left">
+          <div class="sund_button_cont">
+            <button class="wbut bigger_but jos" data-jos_animation="fade-left">
               <div class="wbutin wbutin2 bigger_but">
                 <div class="sunday_but">
                   <u>Nagercoil</u>
@@ -245,8 +292,11 @@
                 </div>
               </div>
             </button>
-            <button class="wbut bigger_but jos" data-jos_animation="fade-left"
-            data-jos_delay="0.1">
+            <button
+              class="wbut bigger_but jos"
+              data-jos_animation="fade-left"
+              data-jos_delay="0.1"
+            >
               <div class="wbutin wbutin2 bigger_but">
                 <div class="sunday_but">
                   <u>Kuzhicode</u>
@@ -256,7 +306,11 @@
             </button>
           </div>
         </div>
-        <div class="photoframe_cont jos"data-jos_animation="fade-left" data-jos_duration="0.7">
+        <div
+          class="photoframe_cont jos"
+          data-jos_animation="fade-left"
+          data-jos_duration="0.7"
+        >
           <div class="photos">
             <div class="photoframe1"></div>
             <div class="photoframe2"></div>
@@ -272,14 +326,19 @@
         </div>
       </div>
       <div class="services">
-        <div class="sunday_tit jos"  >
-          <div class="side_title sidetil_update jos" data-jos_animation="fade-right">
+        <div class="sunday_tit jos">
+          <div
+            class="side_title sidetil_update jos"
+            data-jos_animation="fade-right"
+          >
             <h1>Youth Meeting</h1>
           </div>
-          <div class="line3 lineupdate3 jos" data-jos_animation="slide-left"></div>
+          <div
+            class="line3 lineupdate3 jos"
+            data-jos_animation="slide-left"
+          ></div>
         </div>
-        <div class="meeting_desc_cont jos" 
-        data-jos_delay="0.1">
+        <div class="meeting_desc_cont jos" data-jos_delay="0.1">
           <div class="meeting_time">
             <div class="meeting_sec"><u>3:00 pm - 5:00 pm</u></div>
             <div class="meeting_loca">
@@ -305,15 +364,22 @@
         </div>
 
         <div class="sunday_tit jos">
-          <div class="side_title sidetil_update jos"
-          data-jos_animation="fade-right">
+          <div
+            class="side_title sidetil_update jos"
+            data-jos_animation="fade-right"
+          >
             <h1>Bible Study</h1>
           </div>
-          <div class="line3 lineupdate3 jos"
-          data-jos_animation="fade-left"></div>
+          <div
+            class="line3 lineupdate3 jos"
+            data-jos_animation="fade-left"
+          ></div>
         </div>
-        <div class="meeting_desc_cont jos" data-jos_animation="fade-up"
-        data-jos_delay="0.1">
+        <div
+          class="meeting_desc_cont jos"
+          data-jos_animation="fade-up"
+          data-jos_delay="0.1"
+        >
           <div class="meeting_time">
             <div class="meeting_sec"><u>7:00 pm - 8:00 pm</u></div>
             <div class="meeting_loca">
@@ -338,15 +404,22 @@
           </article>
         </div>
         <div class="sunday_tit jos">
-          <div class="side_title sidetil_update jos"
-          data-jos_animation="fade-right">
+          <div
+            class="side_title sidetil_update jos"
+            data-jos_animation="fade-right"
+          >
             <h1>Fasting Prayer</h1>
           </div>
-          <div class="line3 lineupdate3 jos"
-          data-jos_animation="fade-left"></div>
+          <div
+            class="line3 lineupdate3 jos"
+            data-jos_animation="fade-left"
+          ></div>
         </div>
-        <div class="meeting_desc_cont jos" data-jos_animation="fade-up"
-        data-jos_delay="0.1">
+        <div
+          class="meeting_desc_cont jos"
+          data-jos_animation="fade-up"
+          data-jos_delay="0.1"
+        >
           <div class="meeting_time">
             <div class="meeting_sec"><u>3:00 pm - 5:00 pm</u></div>
             <div class="meeting_loca">
@@ -378,7 +451,11 @@
          -->
       <h1 class="center_title jos">Media</h1>
       <div class="media_cont jos" data-jos_animation="flip">
-        <img class="media_live jos" data-jos_animation="slide" src="./Group 13.png" />
+        <img
+          class="media_live jos"
+          data-jos_animation="slide"
+          src="./Group 13.png"
+        />
       </div>
     </section>
     <section id="contact">
@@ -386,7 +463,7 @@
       <div class="team_cont">
         <div class="team_card jos">
           <div class="cardbase">
-            <div class="team_text ">
+            <div class="team_text">
               <div class="tt1">Pastor Moses Jeyapaul</div>
               <div class="tt2">President</div>
             </div>
@@ -403,8 +480,7 @@
           </div>
         </div>
 
-        <div class="team_card jos"
-        data-jos_delay="0.1">
+        <div class="team_card jos" data-jos_delay="0.1">
           <div class="cardbase">
             <div class="team_text">
               <div class="tt1">Benny Yesudhas</div>
@@ -422,8 +498,7 @@
             </div>
           </div>
         </div>
-        <div class="team_card jos"
-        data-jos_delay="0.2">
+        <div class="team_card jos" data-jos_delay="0.2">
           <div class="cardbase">
             <div class="team_text">
               <div class="tt1">Shiphi Moses</div>
@@ -443,87 +518,127 @@
         </div>
       </div>
       <div class="closing_text">
-        <div class="punch_line jos" data-jos_rootMargin_bottom="30%" data-jos_animation="stretch-vertical">Come & Be Blessed</div>
+        <div
+          class="punch_line jos"
+          data-jos_rootMargin_bottom="30%"
+          data-jos_animation="stretch-vertical"
+        >
+          Come & Be Blessed
+        </div>
       </div>
     </section>
   </body>
 
-<!-- .jos should use display : block property only if other classes dont have a display property-->
-  <style>
-
-    
-  </style>
+  <!-- .jos should use display : block property only if other classes dont have a display property-->
+  <style></style>
 
   <footer>
-    <div class="foot_1 ">
-      <div class="foot11 jos" data-jos_animation="stretch" data-jos_duration="0.5">
+    <div class="foot_1">
+      <div
+        class="foot11 jos"
+        data-jos_animation="stretch"
+        data-jos_duration="0.5"
+      >
         <div class="line7"></div>
         <img class="logo" src="./JyhlAadF_2x-removebg-preview.png" />
         <div class="line7"></div>
       </div>
-      <div class="foot_2 jos" data-jos_animation="stretch-vertical" data-jos_duration="0.5" >
-<div class="foot_2_1">
-  <div class="foot_2_1_1" style="margin-left: 0;">
-    <div class="foot_2_1_1_title">Socials</div>
-    <ul class="foot_2_1_1_list">
-      <li><a href="" target="_blank">Facebook</a></li>
-      <li><a href="" target="_blank">Phone</a></li>
-      <li><a href="" target="_blank">Telegram</a></li>
-      <li><a href="" target="_blank">Whatsapp</a></li>
-      <li><a href="" target="_blank">Email</a></li>
-    </ul>
-  </div>
-  <div class="line6"></div>
-  <div class="foot_2_1_1">
-    <div class="foot_2_1_1_title">Ministry</div>
-    <ul class="foot_2_1_1_list">
-      <li><a href="" target="_blank">Sunday Service</a></li>
-      <li><a href="" target="_blank">Sunday Class</a></li>
-      <li><a href="" target="_blank">Youtht Meeting</a></li>
-      <li><a href="" target="_blank">Fasting Prayer</a></li>
-      <li><a href="" target="_blank">Bible Study</a></li>
-    </ul>
-  </div>
-  <div class="line6"></div>
-  <div class="foot_2_1_1">
-    <div class="foot_2_1_1_title">Services</div>
-    <ul class="foot_2_1_1_list">
-      <li><a href="" target="_blank">Terms & Condition</a></li>
-      <li><a href="" target="_blank">Cookie Policy</a></li>
-      <li><a href="" target="_blank">Report</a></li>
-      <li><a href="" target="_blank">Contact Us</a></li>
-      <li><a href="" target="_blank">Website</a></li>
-    </ul>
-  </div>
-</div>
-<div class="foot_2_2">
-  <div class="foot_2_2_ma">
-    <div class="foot_2_2_te">Location on Map</div>
-    <div class="foot_map_arrow">></div>
-  </div>
-  <div class="foot_2_2_soc">
-    <ul>
-      <li><a href="" target="_blank">o</a></li>
-      <li><a href="" target="_blank">o</a></li>
-      <li><a href="" target="_blank">o</a></li>
-      <li><a href="" target="_blank">o</a></li>
-      <li><a href="" target="_blank">o</a></li>
-    </ul>
-  </div>
-</div>
+      <div
+        class="foot_2 jos"
+        data-jos_animation="stretch-vertical"
+        data-jos_duration="0.5"
+      >
+        <div class="foot_2_1">
+          <div class="foot_2_1_1" style="margin-left: 0">
+            <div class="foot_2_1_1_title">Socials</div>
+            <ul class="foot_2_1_1_list">
+              <li><a href="" target="_blank">Facebook</a></li>
+              <li><a href="" target="_blank">Phone</a></li>
+              <li><a href="" target="_blank">Telegram</a></li>
+              <li><a href="" target="_blank">Whatsapp</a></li>
+              <li><a href="" target="_blank">Email</a></li>
+            </ul>
+          </div>
+          <div class="line6"></div>
+          <div class="foot_2_1_1">
+            <div class="foot_2_1_1_title">Ministry</div>
+            <ul class="foot_2_1_1_list">
+              <li><a href="" target="_blank">Sunday Service</a></li>
+              <li><a href="" target="_blank">Sunday Class</a></li>
+              <li><a href="" target="_blank">Youtht Meeting</a></li>
+              <li><a href="" target="_blank">Fasting Prayer</a></li>
+              <li><a href="" target="_blank">Bible Study</a></li>
+            </ul>
+          </div>
+          <div class="line6"></div>
+          <div class="foot_2_1_1">
+            <div class="foot_2_1_1_title">Services</div>
+            <ul class="foot_2_1_1_list">
+              <li><a href="" target="_blank">Terms & Condition</a></li>
+              <li><a href="" target="_blank">Cookie Policy</a></li>
+              <li><a href="" target="_blank">Report</a></li>
+              <li><a href="" target="_blank">Contact Us</a></li>
+              <li><a href="" target="_blank">Website</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot_2_2">
+          <div class="foot_2_2_ma">
+            <div class="foot_2_2_te">Location on Map</div>
+            <div class="foot_map_arrow">></div>
+          </div>
+          <div class="foot_2_2_soc">
+            <ul>
+              <li><a href="" target="_blank">o</a></li>
+              <li><a href="" target="_blank">o</a></li>
+              <li><a href="" target="_blank">o</a></li>
+              <li><a href="" target="_blank">o</a></li>
+              <li><a href="" target="_blank">o</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="foot_3 jos" data-jos_rootMargin_bottom="0%" data-jos_animation="fade">
-        <div class="jos" data-jos_animation="fade" data-jos_rootMargin_bottom="0%" data-jos_delay="0.1">© 2023</div>
+      <div
+        class="foot_3 jos"
+        data-jos_rootMargin_bottom="0%"
+        data-jos_animation="fade"
+      >
+        <div
+          class="jos"
+          data-jos_animation="fade"
+          data-jos_rootMargin_bottom="0%"
+          data-jos_delay="0.1"
+        >
+          © 2023
+        </div>
         |
-        <div class="jos" data-jos_animation="fade" data-jos_rootMargin_bottom="0%" data-jos_delay="0.2">All Rights Reserved</div>
+        <div
+          class="jos"
+          data-jos_animation="fade"
+          data-jos_rootMargin_bottom="0%"
+          data-jos_delay="0.2"
+        >
+          All Rights Reserved
+        </div>
         |
-        <div class="jos" data-jos_animation="fade" data-jos_rootMargin_bottom="0%" data-jos_delay="0.3">Website By Jesvi Jonathan</div>
+        <div
+          class="jos"
+          data-jos_animation="fade"
+          data-jos_rootMargin_bottom="0%"
+          data-jos_delay="0.3"
+        >
+          Website By Jesvi Jonathan
+        </div>
       </div>
     </div>
   </footer>
 </html>
 
-<script src="https://unpkg.com/jos-animation"></script>
+<script src="https://unpkg.com/jos-animation@0.8.8/dist/jos.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library/dist/v0.8.7/jos.min.js"></script> -->
+
+<!-- <script src="./jos.debug.js"></script> -->
+
 <!-- Initialize JOS with default settings -->
 <script>
   JOS.init({

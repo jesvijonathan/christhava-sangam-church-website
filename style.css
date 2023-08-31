@@ -123,7 +123,7 @@ section {
   display: flex;
   list-style-type: none;
   padding: 0.3vw 0vw;
-  transition: all 0.1s;
+  transition: all 0.3s;
   z-index: 3;
 }
 .navlink li:hover {
@@ -420,6 +420,18 @@ h1 {
   z-index: 1;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
+.photoframe_active {
+  animation: flip 1s forwards;
+}
+@keyframes flip {
+  0% {
+    transform: translate(-5%, 5%) rotateY(0deg);
+  }
+  100% {
+    transform: translate(-5%, 5%) rotateY(180deg);
+  }
+}
 .photoframe2 {
   position: absolute;
   background-color: #7e786f;
@@ -427,6 +439,16 @@ h1 {
   width: 27vw;
   z-index: 0;
   background-image: url("./Mountains.png");
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.photoframe3 {
+  position: absolute;
+  background-color: #7e786f;
+  height: 27vw;
+  width: 27vw;
+  z-index: -1;
+  transform: translate(5%, -5%);
+  background-image: url("./grass.jpg");
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 article {
@@ -444,7 +466,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 5rem;
+  margin-right: 3rem;
 }
 .photoframe_picker ul {
   gap: 1.3vw;
@@ -912,7 +934,7 @@ footer {
   margin-right: 3vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   align-content: center;
   flex-wrap: nowrap;
@@ -920,14 +942,15 @@ footer {
 
 .foot_2_2_ma {
   /* border: 0.1vw solid white; */
-  width: 100%;
-  height: 3.3vw;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: #d9d9d91e;
+  border-radius: 1vw;
+  margin-top: 2vw;
 }
 .foot_2_2_te {
   text-align: center;
@@ -962,7 +985,9 @@ footer {
   align-content: center;
   justify-content: center;
   align-items: center;
-  margin-top: 2.3vw;
+  margin-top: 2vw;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.3vw;
 }
 .foot_2_2_soc ul {
   display: flex;
@@ -978,4 +1003,23 @@ footer {
 .foot_2_2_soc ul li:hover {
   list-style: none;
   color: white;
+}
+
+.map_but {
+  margin-left: 2vw;
+  padding: 0.5vw 1.5vw;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.07);
+
+  border: 0.1vw solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.map_but:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }

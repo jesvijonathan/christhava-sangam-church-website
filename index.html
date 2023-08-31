@@ -43,6 +43,8 @@
       href="/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"  crossorigin="anonymous">
   </head>
   <div class="splash" id="splash">
     <div class="logo_cont" id="logo_cont">
@@ -76,8 +78,8 @@
     <div class="navbar">
       <div
         class="navbar_bg jos"
-        data-jos_anchor="#main_title"
-        data-jos_duration="0.5"
+        data-jos_anchor="#backgroun_main_dot"
+        data-jos_duration="0.3"
         data-jos_animation="navbg_change"
       ></div>
       <ul class="navlink">
@@ -129,38 +131,52 @@
   <body class="main" id="butter">
     <section
       id="home"
-      class="first_section"
-      data-jos_anchor="#main_title"
-      data-jos_animation="blur"
-      data-jos_duration="0.5"
+      class="first_section jos"
+      data-jos_startVisible="true"
+      data-jos_scroll="scall"
     >
-      <div id="background_main" class="background"></div>
-      <script>
-        function kk() {
-          alert("kk");
-        }
-      </script>
-      <div class="landing_container">
-        <div id="main_title" class="landing_title">
-          Christhava Sangam Church
-        </div>
-        <div class="landing_verse_container">
-          <div class="line"></div>
-          <div id="landing_verse" class="landing_verse">
-            "Surely the LORD is in this place" - Genesis 28:16
-          </div>
-          <div class="line"></div>
-        </div>
+
+<div id="home_sub">
+  <div id="background_main" class="background" style="transition:0s;"></div>
+  
+  <script>
+      
+    let conta = document.getElementById("home_sub");
+    let bg = document.getElementById("background_main");
+    function scall(e) {
+      conta.style.transform = "translateY(" + e.jos.rootScrollProgress * 100 + "%)";
+      bg.style.transform = "scale(" + (1-e.jos.rootScrollProgress) + ")";
+      bg.style.opacity =  1+e.jos.rootScrollProgress;
+
+    }
+  </script>
+  <script>
+    function kk() {
+      alert("kk");
+    }
+  </script>
+  <div class="landing_container">
+    <div id="main_title" class="landing_title">
+      Christhava Sangam Church
+    </div>
+    <div class="landing_verse_container">
+      <div class="line"></div>
+      <div id="landing_verse" class="landing_verse">
+        "Surely the LORD is in this place" - Genesis 28:16
       </div>
-      <div class="bg_picker">
-        <ul id="backgroun_main_dot">
-          <li onclick="background_changer(0)" style="opacity: 0"></li>
-          <li onclick="background_changer(0)" class="active"></li>
-          <li onclick="background_changer(1)"></li>
-          <li onclick="background_changer(2)"></li>
-          <li onclick="background_changer(3)"></li>
-        </ul>
-      </div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="bg_picker">
+    <ul id="backgroun_main_dot">
+      <li onclick="background_changer(0)" style="opacity: 0"></li>
+      <li onclick="background_changer(0)" class="active"></li>
+      <li onclick="background_changer(1)"></li>
+      <li onclick="background_changer(2)"></li>
+      <li onclick="background_changer(3)"></li>
+    </ul>
+  </div>
+</div>
     </section>
     <style>
       .preloaded-image {
@@ -214,7 +230,7 @@
         else i++;
         background_changer(i);
       }, interval_s);
-    </script>
+    </script> 
     <section id="about">
       <h1
         class="center_title jos"
@@ -310,19 +326,86 @@
           class="photoframe_cont jos"
           data-jos_animation="fade-left"
           data-jos_duration="0.7"
+          onmouseenter="over=true;autochangesund();"
+          onmouseleave="over=false;autochangesund();"
+
         >
-          <div class="photos">
-            <div class="photoframe1"></div>
-            <div class="photoframe2"></div>
+          <div class="photos" >
+            <div id="photoframe1" class="photoframe1 photoframe_active"></div>
+            <div id="photoframe2" class="photoframe2"></div>
+            
+            <div id="photoframe3" class="photoframe3"></div>
           </div>
           <div class="photoframe_picker">
-            <ul>
-              <li class="ph_active"></li>
-              <li></li>
-              <li></li>
-              <div class="photoframe_picker_triangle"></div>
+            <ul id="sunpic">
+              <li onclick="changeSun(0)"></li>
+              <li onclick="changeSun(1);"></li>
+              <li onclick="changeSun(2)"></li>
+              <div onclick="changeSun(3)"class="photoframe_picker_triangle"></div>
             </ul>
           </div>
+          <script>
+            let ioo = 0;
+            function changeSun(i) {
+              ioo = i; 
+              // swap photoframe1 and photoframe2
+              let pf1 = document.getElementById("photoframe1");
+              let pf2 = document.getElementById("photoframe2");
+              let pf3 = document.getElementById("photoframe3");
+              let sunp = document.getElementById("sunpic");
+
+              let pics = ["./mount.jpg", "./Mountains.png", "./grass.jpg"]
+
+              if (i == 0) {
+                pf1.style.backgroundImage = "url(" + pics[0] + ")";
+                pf2.style.backgroundImage = "url(" + pics[1] + ")";
+                pf3.style.backgroundImage = "url(" + pics[2] + ")";
+
+              } else if (i == 1) {
+                pf1.style.backgroundImage = "url(" + pics[1] + ")";
+                pf2.style.backgroundImage = "url(" + pics[2] + ")";
+                pf3.style.backgroundImage = "url(" + pics[0] + ")";
+              } else if (i == 2) {
+                pf1.style.backgroundImage = "url(" + pics[2] + ")";
+                pf2.style.backgroundImage = "url(" + pics[0] + ")";
+                pf3.style.backgroundImage = "url(" + pics[1] + ")";
+              }
+
+              sunpic = document.getElementById("sunpic");
+              for (let i = 0; i < sunpic.children.length; i++) {
+                sunpic.children[i].classList.remove("ph_active");
+              }
+              sunpic.children[i].classList.add("ph_active");
+              
+              pf1.animate(
+                [
+                { transform: "translate(5%, -10%)", opacity: 0.7 },
+                { transform: "translate(-5%, 5%)",opacity: 1 },
+                ],
+                {
+                  duration: 1000,
+                  fill: "forwards",
+                }
+              ); 
+            
+            }
+
+            over = false;
+            let interval_sun;
+            function autochangesund( ){  
+              if(over == false){
+                interval_sun = setInterval(() => {
+                  if (ioo >= 2) ioo = 0;
+                  else ioo++;
+                  changeSun(ioo);
+                }, 5000);
+              }
+              else{
+                clearInterval(interval_sun);
+              }
+            }
+            autochangesund(); 
+          </script>
         </div>
       </div>
       <div class="services">
@@ -584,17 +667,43 @@
         </div>
         <div class="foot_2_2">
           <div class="foot_2_2_ma">
-            <div class="foot_2_2_te">Location on Map</div>
-            <div class="foot_map_arrow">></div>
+            <iframe id="map1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15796.979171794766!2d77.4119854!3d8.1780767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f0c2dac5c171%3A0xf51b95b58ffaeea6!2sChristava%20Sangam%20Church!5e0!3m2!1sen!2sin!4v1693511087421!5m2!1sen!2sin" 
+            width="300"
+            height="200"
+            style="border:0;border-radius: 0.4vw;
+            height:14vw;
+            width:22vw"
+             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+
+
+            <iframe id="map2"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126370.80089505346!2d77.2997269164062!3d8.193937700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f133c138cb4d%3A0x438fa9736f872661!2sDerik%20Hyundai%20(%20Nagercoil%20)!5e0!3m2!1sen!2sin!4v1693511742883!5m2!1sen!2sin" 
+            width="300"
+            height="200"
+            style="border:0;border-radius: 0.4vw;
+            display:none;
+            height:14vw;
+            width:22vw"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="foot_2_2_soc">
-            <ul>
-              <li><a href="" target="_blank">o</a></li>
-              <li><a href="" target="_blank">o</a></li>
-              <li><a href="" target="_blank">o</a></li>
-              <li><a href="" target="_blank">o</a></li>
-              <li><a href="" target="_blank">o</a></li>
-            </ul>
+           Church Location On Map
+           <button class="map_but" onclick="map_changer();">
+            <i class="fa-solid fa-retweet" style="opacity: 0.7;"></i>
+           </button>
+           <script>
+            function map_changer(){
+              map1 = document.getElementById("map1");
+              map2 = document.getElementById("map2");
+              if(map1.style.display == "none"){
+                map1.style.display = "block";
+                map2.style.display = "none";
+              }
+              else{
+                map1.style.display = "none";
+                map2.style.display = "block";
+              }
+            }
+           </script>
           </div>
         </div>
       </div>
@@ -657,6 +766,9 @@
     }
     clearInterval(splashScreen);
   }, 6000);
+  //loader
+  document.getElementById("logo_cont").classList.add("logo_cont_out");
+  document.getElementById("splash").classList.add("splash_fade");
 
 
 </script>

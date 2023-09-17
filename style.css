@@ -1458,4 +1458,11 @@ footer {
     margin-top: 3rem;
     margin-bottom: 2rem;
   }
+  #logo_cont {
+    width: 25rem;
+    height: 25rem;
+  }
+  svg {
+    transform: scale(0.7);
+  }
 }

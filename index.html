@@ -76,14 +76,45 @@
   </div>
 
   <header>
-    <div class="navbar">
-      <div
-        class="navbar_bg jos"
-        data-jos_anchor="#backgroun_main_dot"
-        data-jos_duration="0.3"
-        data-jos_animation="navbg_change"
-      ></div>
-      <ul class="navlink">
+    <i class="clos brsbg fa-solid fa-bars" 
+    onclick="navbar_hamb()"></i>
+    <div class="navbar" id="navbar">
+      <div class="navbar_logo">
+<div>
+  <img class="logo log" src="./JyhlAadF_2x-removebg-preview.png" />
+
+<div
+  class="navbar_bg jos"
+  data-jos_anchor="#backgroun_main_dot"
+  data-jos_duration="0.3"
+  data-jos_animation="navbg_change"
+></div>
+<script>
+  let navbar = document.getElementById("navbar");
+  let navbar_switch = true;
+  let mark = document.querySelector(".clos");
+  function navbar_hamb(){ 
+    // add xmark or remove xmark and add bars
+    if(navbar_switch == false){
+      mark.classList.remove("fa-xmark");
+      mark.classList.add("fa-bars");
+      mark.classList.add("brsbg");
+      navbar_switch = true;
+      navbar.style.transform = "translateX(-100%)";
+    }
+    else{
+      mark.classList.remove("fa-bars");
+      mark.classList.add("fa-xmark");
+      mark.classList.remove("brsbg");
+      navbar_switch = false;
+      navbar.style.transform = "translateX(0%)";
+    }
+
+  }
+</script>
+</div>
+
+      <ul class="navlink" onclick="navbar_switch;navbar_hamb()">
         <li class="jos" data-jos_anchor="#home" data-jos_animation="underline">
           <a href="#home">Home</a>
         </li>
@@ -156,7 +187,10 @@
       alert("kk");
     }
   </script>
+  
+    <img class="logo logg" src="./JyhlAadF_2x-removebg-preview.png" />
   <div class="landing_container">
+    
     <div id="main_title" class="landing_title">
       Christhava Sangam Church
     </div>
@@ -834,8 +868,8 @@ cursor: auto;">
     clearInterval(splashScreen);
   }, 6000);
   //loader
-  //document.getElementById("logo_cont").classList.add("logo_cont_out");
-  //document.getElementById("splash").classList.add("splash_fade");
+  document.getElementById("logo_cont").classList.add("logo_cont_out");
+  document.getElementById("splash").classList.add("splash_fade");
 
 
 </script>

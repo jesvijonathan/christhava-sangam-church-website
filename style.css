@@ -1527,6 +1527,9 @@ footer {
   .splash {
     z-index: 110;
   }
+  .splash_fade {
+    z-index: -10;
+  }
   svg {
     transform: scale(0.6);
   }

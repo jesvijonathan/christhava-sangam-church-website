@@ -45,6 +45,7 @@
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"  crossorigin="anonymous">
+
   </head>
   <div class="splash" id="splash">
     <div class="logo_cont" id="logo_cont">
@@ -255,7 +256,18 @@
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took and typesetting industry.
       </article>
-      <h1 class="center_title jos" style="margin-top: 5vw">Mission & Vision</h1>
+      <article class="center_title lap_xtra artt jos" style="margin-top: 2vw">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took and typesetting industry.
+      </article>
+      <h1 class="center_title jos miss" style="margin-top: 5vw">Mission & Vision</h1>
       <article class="jos artt" style="margin-top: 2rem">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -534,12 +546,58 @@
          -->
       <h1 class="center_title jos">Media</h1>
       <div class="media_cont jos" data-jos_animation="flip">
+
         <img
           class="media_live jos"
           data-jos_animation="slide"
           src="./Group 13.png"
+          id="med-live"
+          onclick='window.open("https://www.youtube.com/watch?v=-dULZmfTmuU")'
         />
+
+        
+<div class="media_live med_m jos" data-jos_animation="slide" id="med-gal" style="display: none;   width: 80%;
+cursor: auto;">
+  <!-- on click open img on new tab -->
+  <img class="medd" src="./beach.jpg" 
+  onclick="window.open(this.src)"/>
+  <img class="medd" src="./grass.jpg" onclick="window.open(this.src)"/>
+  <img class="medd" src="./mount.jpg" onclick="window.open(this.src)"/>
+
+  <img class="medd" src="./res.jpg" onclick="window.open(this.src)"/>  
+</div>
+        
+        <div class="media_list">
+          <button class="media_button med_active" onclick="media_changer(0)">Live</button>
+          <button class="media_button" onclick="media_changer(1)">Gallery</button>
+          <button class="media_button" onclick="media_changer(2)">Media</button>
+        </div>
       </div>
+      <script>
+        function media_changer(i) {
+          let media = document.getElementsByClassName("media_button");
+          for (let j = 0; j < media.length; j++) {
+            media[j].classList.remove("med_active");
+          }
+          media[i].classList.add("med_active");
+          const med_live = document.getElementById("med-live");
+          const med_gal = document.getElementById("med-gal");
+          switch (i) {
+            case 0:
+              med_live.style.display = "flex";
+              med_gal.style.display = "none";
+              break;
+            case 1:
+              med_live.style.display = "none";
+              med_gal.style.display = "flex";
+              break;
+            case 2:
+              med_live.style.display = "none";
+              med_gal.style.display = "none";
+              break;
+          }
+        }
+      </script>
     </section>
     <section id="contact">
       <h1 class="center_title jos">Meet The Team</h1>
@@ -606,7 +664,7 @@
           data-jos_rootMargin_bottom="30%"
           data-jos_animation="stretch-vertical"
         >
-          Come & Be Blessed
+        Come & be Blessed in the Mighty Name of <b>JESUS</b>
         </div>
       </div>
     </section>
@@ -667,7 +725,8 @@
         </div>
         <div class="foot_2_2">
           <div class="foot_2_2_ma">
-            <iframe id="map1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15796.979171794766!2d77.4119854!3d8.1780767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f0c2dac5c171%3A0xf51b95b58ffaeea6!2sChristava%20Sangam%20Church!5e0!3m2!1sen!2sin!4v1693511087421!5m2!1sen!2sin" 
+            <iframe 
+            class="jos" data-jos_animation="zoom" id="map1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15796.979171794766!2d77.4119854!3d8.1780767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f0c2dac5c171%3A0xf51b95b58ffaeea6!2sChristava%20Sangam%20Church!5e0!3m2!1sen!2sin!4v1693511087421!5m2!1sen!2sin" 
             width="300"
             height="200"
             style="border:0;border-radius: 0.4vw;
@@ -677,7 +736,9 @@
  
 
 
-            <iframe id="map2"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126370.80089505346!2d77.2997269164062!3d8.193937700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f133c138cb4d%3A0x438fa9736f872661!2sDerik%20Hyundai%20(%20Nagercoil%20)!5e0!3m2!1sen!2sin!4v1693511742883!5m2!1sen!2sin" 
+            <iframe 
+            class="jos" data-jos_animation="zoom"
+             id="map2"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126370.80089505346!2d77.2997269164062!3d8.193937700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f133c138cb4d%3A0x438fa9736f872661!2sDerik%20Hyundai%20(%20Nagercoil%20)!5e0!3m2!1sen!2sin!4v1693511742883!5m2!1sen!2sin" 
             width="300"
             height="200"
             style="border:0;border-radius: 0.4vw;

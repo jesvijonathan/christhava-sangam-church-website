@@ -454,6 +454,7 @@ h1 {
   background-image: url("./grass.jpg");
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
 article {
   margin: 0rem 8vw;
   font-family: "Krub";
@@ -932,6 +933,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.logg {
+  display: none;
+}
+.clos {
+  display: none !important;
+}
 .foot_2 {
   width: 100%;
   width: 82vw;
@@ -1170,7 +1177,7 @@ footer {
   }
   .clos {
     z-index: 100;
-    display: flex;
+    display: flex !important;
     position: fixed;
     top: 4.5rem;
     padding: 1.5rem 2rem;

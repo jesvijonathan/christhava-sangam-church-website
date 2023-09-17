@@ -1346,4 +1346,116 @@ footer {
     width: 12rem;
     height: 12rem;
   }
+  .foot_2 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+
+  .foot_2_1_1 {
+    width: 100%;
+    margin: 0vw 0vw;
+  }
+  .foot_2_1_1_title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--col_light_0);
+    letter-spacing: 0.4vw;
+    margin-bottom: 1rem;
+    font-style: bold;
+    text-align: center;
+  }
+  .foot_2_1_1_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--col_light_0-1);
+    letter-spacing: 0.1vw;
+    list-style: none;
+  }
+  .foot_2_1_1_list li a:hover {
+    text-decoration: underline;
+  }
+  .foot_2_2 {
+    width: 100%;
+    font-family: "jura";
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+    height: fit-content !important;
+  }
+  .foot_2_1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: 80rem;
+  }
+  .line6 {
+    display: none;
+  }
+  .foot11 {
+    width: 86%;
+  }
+  iframe {
+    width: 38rem !important;
+    height: 30rem !important;
+  }
+  .foot_2_2_soc {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    gap: 2rem;
+  }
+  .map_but {
+    padding: 1rem 1.5rem;
+  }
+  .map_but i {
+    font-size: 1.6rem;
+  }
+  .foot_2_1 {
+    display: none;
+  }
+  .foot_3 {
+    margin-top: 3rem;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+  .punch_line {
+    font-size: 2rem;
+    margin-top: 5rem !important;
+    padding: 3rem;
+    padding-top: 6rem;
+  }
+  .foot_ti {
+    font-size: 3.5rem;
+    color: var(--col_light_0);
+    font-family: "jura";
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
 }

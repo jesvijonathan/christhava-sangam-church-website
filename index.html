@@ -75,12 +75,14 @@
     </div>
   </div>
 
+  <i class="clos brsbg fa-solid fa-bars" 
+  data-jos_anchor="#backgroun_main_dot"
+  data-jos_duration="0.3"
+  data-jos_animation="navbg_change"
+  onclick="navbar_hamb()"></i>
+
   <header>
-    <i class="clos brsbg fa-solid fa-bars" 
-    data-jos_anchor="#backgroun_main_dot"
-    data-jos_duration="0.3"
-    data-jos_animation="navbg_change"
-    onclick="navbar_hamb()"></i>
+
     <div class="navbar" id="navbar">
       <div class="navbar_logo">
 <div>
@@ -96,6 +98,7 @@
   let navbar = document.getElementById("navbar");
   let navbar_switch = true;
   let mark = document.querySelector(".clos");
+  let header = document.querySelector("header");
   function navbar_hamb(){ 
     // add xmark or remove xmark and add bars
     if(navbar_switch == false){
@@ -103,14 +106,14 @@
       mark.classList.add("fa-bars");
       mark.classList.add("brsbg");
       navbar_switch = true;
-      navbar.style.transform = "translateX(-100%)";
+      header.style.transform = "translateX(-100%)";
     }
     else{
       mark.classList.remove("fa-bars");
       mark.classList.add("fa-xmark");
       mark.classList.remove("brsbg");
       navbar_switch = false;
-      navbar.style.transform = "translateX(0%)";
+      header.style.transform = "translateX(0%)";
     }
 
   }

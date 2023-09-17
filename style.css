@@ -1524,6 +1524,9 @@ footer {
     width: 25rem;
     height: 25rem;
   }
+  .splash {
+    z-index: 110;
+  }
   svg {
     transform: scale(0.6);
   }

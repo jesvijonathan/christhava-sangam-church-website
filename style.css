@@ -1213,9 +1213,10 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    opacity: 0.7;
   }
   .socials_icons a i {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .navbar {
     transition: 0.3s ease;

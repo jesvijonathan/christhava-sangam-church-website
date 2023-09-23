@@ -175,9 +175,7 @@
       .jos-underline {
         border-bottom: 0.1rem solid transparent !important;
       }
-      .jos-navbg_change {
-        background-color: rgba(46, 38, 24, 1) !important;
-      }
+
     </style>
     <script>
       function navbar_bg() {
@@ -887,14 +885,23 @@ cursor: auto;">
 </script>
 
 <script>
+
+
+  const loader_tim  = setTimeout(() => {
+    document.getElementById("logo_cont").classList.add("logo_cont_out");
+    document.getElementById("splash").classList.add("splash_fade");
+  }, 5000);
+  //loader
+
+/*
   const splashScreen = setInterval(() => {
     if (document.readyState === "complete") {
       document.getElementById("logo_cont").classList.add("logo_cont_out");
       document.getElementById("splash").classList.add("splash_fade");
     }
     clearInterval(splashScreen);
-  }, 6000);
-  //loader
+  }, 6000);*/
+
 
 //  document.getElementById("logo_cont").classList.add("logo_cont_out");
 //  document.getElementById("splash").classList.add("splash_fade");

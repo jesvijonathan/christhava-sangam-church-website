@@ -252,7 +252,7 @@ section {
   height: 100vh;
   z-index: 100;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
 }
 .logo_cont {
@@ -1106,7 +1106,9 @@ footer {
   list-style: none;
   color: white;
 }
-
+.jos-navbg_change {
+  background-color: rgba(46, 38, 24, 1) !important;
+}
 .map_but {
   margin-left: 2vw;
   padding: 0.5vw 1.5vw;
@@ -1184,7 +1186,7 @@ footer {
     position: fixed;
     top: 4.5rem;
     padding: 1.5rem 2rem;
-    font-size: 5rem;
+    font-size: 4rem;
     left: 95%;
     font-weight: 100;
     transform: translate(-95%, 0%);
@@ -1196,6 +1198,17 @@ footer {
     /* backdrop-filter: blur(4rem); */
     border-radius: 1rem;
   }
+  .jos-navbg_change {
+    background-color: rgba(46, 38, 24, 0.85) !important;
+  }
+  .fa-xmark {
+    background-color: rgba(46, 38, 24, 0) !important;
+    font-size: 5rem;
+  }
+  div[class="jos-navbg_change"] {
+    background-color: rgba(46, 38, 24, 1) !important;
+  }
+
   header {
     transition: 0.3s ease;
     transform: translateX(-100%);
@@ -1242,6 +1255,7 @@ footer {
     height: 100rem;
     background-position: fixed;
     background-size: fixed;
+    background-color: var(--col_light_7);
   }
   .center_title {
     margin-top: 5rem;

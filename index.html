@@ -100,7 +100,8 @@
   let mark = document.querySelector(".clos");
   let header = document.querySelector("header");
   function navbar_hamb(){ 
-    // add xmark or remove xmark and add bars
+    if(window.innerWidth > 1000) return;
+
     if(navbar_switch == false){
       mark.classList.remove("fa-xmark");
       mark.classList.add("fa-bars");

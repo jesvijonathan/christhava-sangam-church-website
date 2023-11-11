@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>Christhava Sangam Church</title>
-    <link
+    <!-- <link
     id="jos-stylesheet"
     rel="stylesheet"
     href="https://unpkg.com/jos-animation@0.8.8/dist/jos.css"
     crossorigin="anonymous"
-  />
+  /> -->
 
     <!-- <link
       id="jos-stylesheet"
@@ -201,8 +201,10 @@
       
     let conta = document.getElementById("home_sub");
     let bg = document.getElementById("background_main");
+    // if width is less than 1000px then nu = -1 else 1
+    let nu = window.innerWidth < 1000 ? -1 : 1;
     function scall(e) {
-      conta.style.transform = "translateY(" + e.jos.rootScrollProgress * 100 + "%)";
+      conta.style.transform = "translateY(" + nu*e.jos.rootScrollProgress * 100 + "%)";
       bg.style.transform = "scale(" + (1-e.jos.rootScrollProgress) + ")";
       bg.style.opacity =  1+e.jos.rootScrollProgress;
 
@@ -869,15 +871,15 @@ cursor: auto;">
   </footer>
 </html>
 
-<script src="https://unpkg.com/jos-animation@0.8.8/dist/jos.js"></script>
+<script src="https://unpkg.com/jos-animation@0.8.8"></script>
 <!-- <script src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library/dist/v0.8.7/jos.min.js"></script> -->
 
-<!-- <script src="./jos.debug.js"></script> -->
+<!-- <script src="./jos copy.js"></script> -->
 
 <!-- Initialize JOS with default settings -->
 <script>
   JOS.init({
-    passive:true,
+    passive:false,
     duration: 0.5,
     animation: "fade-up",
     rootMargin: "0% 0% 7% 0%",
